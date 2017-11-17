@@ -104,26 +104,35 @@ exports.default = function (a, b) {
 "use strict";
 
 
+__webpack_require__(3);
+
 var smallImg = document.createElement('img');
 
-smallImg.src = __webpack_require__(3);
+smallImg.src = __webpack_require__(4);
 
 document.body.appendChild(smallImg);
 
 var bigImg = document.createElement('img');
 
-bigImg.src = __webpack_require__(4);
+bigImg.src = __webpack_require__(5);
 
 document.body.appendChild(bigImg);
 
 /***/ }),
 /* 3 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+module.exports = {"test":"WHA_qht0s1ePCxopa-yFr"};
+
+/***/ }),
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "images/p1.2e7da9a447a5f5ccce6860763fa5c173.png";
 
 /***/ }),
-/* 4 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "images/p2.4a7e5eef335f7576260979730b80d9f8.png";

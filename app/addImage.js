@@ -1,3 +1,5 @@
+import '../styles/style.css'
+
 let smallImg = document.createElement('img')
 
 smallImg.src=require('../images/p1.png');

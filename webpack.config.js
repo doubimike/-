@@ -1,4 +1,9 @@
 const path = require('path')
+
+const ExtractTextPlugin = require("extract-text-webpack-plugin")
+
+
+
 module.exports = {
 	entry: './app/index.js', // 入口文件
 	output: {
@@ -24,6 +29,23 @@ module.exports = {
 					name: 'images/[name].[hash].[ext]'
 				}
 			}]
+		}, {
+			test: /\.css$/,
+			// 写法和之前基本一致
+			loader: ExtractTextPlugin.extract({
+				// 必须这样写，否则会报错
+				fallback: 'style-loader',
+				use: [{
+					loader: 'css-loader',
+					options: {
+						modules: true
+					}
+				}]
+			})
 		}]
-	}
+	},
+	plugins: [
+		// 输出的文件路径
+		new ExtractTextPlugin("css/[name].[hash].css")
+	]
 }
