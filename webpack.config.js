@@ -1,7 +1,7 @@
 const path = require('path')
 
 const ExtractTextPlugin = require("extract-text-webpack-plugin")
-
+var HtmlwebpackPlugin = require('html-webpack-plugin');
 
 
 module.exports = {
@@ -46,6 +46,6 @@ module.exports = {
 	},
 	plugins: [
 		// 输出的文件路径
-		new ExtractTextPlugin("css/[name].[hash].css")
+		new HtmlwebpackPlugin(),new ExtractTextPlugin("css/[name].[hash].css")
 	]
 }

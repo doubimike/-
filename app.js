@@ -3,14 +3,18 @@ var app = express()
 
 // respond with "hello world" when a GET request is made to the homepage
 app.get('/', function (req, res) {
-  res.sendFile(__dirname+'/index.html')
+  res.sendFile(__dirname+'/build/index.html')
 })
 
-app.use('/css',express.static(__dirname+'/css', {
+app.use('/css',express.static(__dirname+'/build/css', {
   maxage: '31557600s'
 }));
 
 app.use('/build',express.static(__dirname+'/build', {
+  maxage: '31557600s'
+}));
+
+app.use('/',express.static(__dirname+'/build', {
   maxage: '31557600s'
 }));
 
