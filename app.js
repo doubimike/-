@@ -6,7 +6,9 @@ app.get('/', function (req, res) {
   res.sendFile(__dirname+'/index.html')
 })
 
-app.use('/css',express.static(__dirname+'/css'));
+app.use('/css',express.static(__dirname+'/css', {
+  maxage: '31557600s'
+}));
 
 var server = app.listen(9000,function(){    /*监听端口*/
     var host = server.address().address;
