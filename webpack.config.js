@@ -5,12 +5,12 @@ var HtmlwebpackPlugin = require('html-webpack-plugin');
 var QiniuPlugin = require('qiniu-webpack-plugin');
 
 // 这里配置 Plugin 
-var qiniuPlugin = new QiniuPlugin({
-  ACCESS_KEY: '',
-  SECRET_KEY: '',
-  bucket: 'doubmike',
-  path: '[hash]'
-});
+// var qiniuPlugin = new QiniuPlugin({
+//   ACCESS_KEY: '',
+//   SECRET_KEY: '',
+//   bucket: 'doubmike',
+//   path: '[hash]'
+// });
 
 
 
