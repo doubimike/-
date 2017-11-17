@@ -59,6 +59,7 @@ module.exports = {
 	},
 	plugins: [
 		// 输出的文件路径
-		new HtmlwebpackPlugin(),new ExtractTextPlugin("css/[name].[hash].css"),qiniuPlugin
+		// new HtmlwebpackPlugin(),new ExtractTextPlugin("css/[name].[hash].css"),qiniuPlugin
+		new HtmlwebpackPlugin(),new ExtractTextPlugin("css/[name].[hash].css")
 	]
 }
