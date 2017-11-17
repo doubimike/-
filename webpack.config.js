@@ -21,7 +21,7 @@ module.exports = {
 		path: path.resolve(__dirname, 'build'), // 必须使用绝对地址，输出文件夹
 		filename: "bundle.[hash].js", // 打包后输出文件的文件名
 		// 这里是七牛的域名加上 Webpack 的 hash 
-    	publicPath:"http://obnbtn4jw.bkt.clouddn.com/[hash]/"
+    	// publicPath:"http://obnbtn4jw.bkt.clouddn.com/[hash]/"
 	},
 	module: {
 		rules: [{
