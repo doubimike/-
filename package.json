@@ -1,0 +1,22 @@
+{
+  "name": "deploy",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/doubimike/-.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/doubimike/-/issues"
+  },
+  "homepage": "https://github.com/doubimike/-#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
