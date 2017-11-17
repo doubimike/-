@@ -2,13 +2,26 @@ const path = require('path')
 
 const ExtractTextPlugin = require("extract-text-webpack-plugin")
 var HtmlwebpackPlugin = require('html-webpack-plugin');
+var QiniuPlugin = require('qiniu-webpack-plugin');
+
+// 这里配置 Plugin 
+var qiniuPlugin = new QiniuPlugin({
+  ACCESS_KEY: '',
+  SECRET_KEY: '',
+  bucket: 'doubmike',
+  path: '[hash]'
+});
+
+
 
 
 module.exports = {
 	entry: './app/index.js', // 入口文件
 	output: {
 		path: path.resolve(__dirname, 'build'), // 必须使用绝对地址，输出文件夹
-		filename: "bundle.[hash].js" // 打包后输出文件的文件名
+		filename: "bundle.[hash].js", // 打包后输出文件的文件名
+		// 这里是七牛的域名加上 Webpack 的 hash 
+    	publicPath:"http://obnbtn4jw.bkt.clouddn.com/[hash]/"
 	},
 	module: {
 		rules: [{
@@ -46,6 +59,6 @@ module.exports = {
 	},
 	plugins: [
 		// 输出的文件路径
-		new HtmlwebpackPlugin(),new ExtractTextPlugin("css/[name].[hash].css")
+		new HtmlwebpackPlugin(),new ExtractTextPlugin("css/[name].[hash].css"),qiniuPlugin
 	]
 }
