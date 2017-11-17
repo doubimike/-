@@ -14,6 +14,10 @@ app.use('/build',express.static(__dirname+'/build', {
   maxage: '31557600s'
 }));
 
+app.use('/images',express.static(__dirname+'/build/images', {
+  maxage: '31557600s'
+}));
+
 var server = app.listen(9000,function(){    /*监听端口*/
     var host = server.address().address;
     var port = server.address().port; 

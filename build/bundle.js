@@ -74,6 +74,10 @@ var _sum = __webpack_require__(1);
 
 var _sum2 = _interopRequireDefault(_sum);
 
+var _addImage = __webpack_require__(2);
+
+var _addImage2 = _interopRequireDefault(_addImage);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 console.log((0, _sum2.default)(1, 2));
@@ -92,6 +96,37 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = function (a, b) {
 	return a + b;
 };
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var smallImg = document.createElement('img');
+
+smallImg.src = __webpack_require__(3);
+
+document.body.appendChild(smallImg);
+
+var bigImg = document.createElement('img');
+
+bigImg.src = __webpack_require__(4);
+
+document.body.appendChild(bigImg);
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "images/p1.2e7da9a447a5f5ccce6860763fa5c173.png";
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "images/p2.4a7e5eef335f7576260979730b80d9f8.png";
 
 /***/ })
 /******/ ]);
