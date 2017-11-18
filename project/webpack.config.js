@@ -17,7 +17,7 @@ const VENDOR = ["faker",
 ];
 
 module.exports = {
-  entry: {vender: VENDOR,bundle: './src/index.js'},
+  entry: {vendor: VENDOR,bundle: './src/index.js'},
   output: {
     path: path.join(__dirname, 'dist'),
     // 既然我们希望缓存生效，就应该每次在更改代码以后修改文件名
