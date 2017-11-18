@@ -2,6 +2,8 @@
 import React from 'react';
 import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 
+
+
 import Home from './components/Home';
 import ArtistMain from './components/artists/ArtistMain';
 
