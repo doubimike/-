@@ -12,11 +12,12 @@ const VENDOR = ["faker",
   "react-redux",
   "redux",
   "redux-form",
-  "redux-thunk"
+  "redux-thunk",
+  "react-router"
 ];
 
 module.exports = {
-  entry: {bundle: './src/index.js',vender: VENDOR},
+  entry: {vender: VENDOR,bundle: './src/index.js'},
   output: {
     path: path.join(__dirname, 'dist'),
     // 既然我们希望缓存生效，就应该每次在更改代码以后修改文件名
